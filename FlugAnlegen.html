@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--  
+  Dateiname     : FlugAnlegen.html
+  Veranstaltung : Webbasierte Informationssysteme
+  Fragestellung : Formular Stufe 15, Eintrag der Formulardaten in Datenbank.
+                  Mit Http-Nachricht Post.
+  Version       : 10.02.2011
+-->
+
+<html>
+  <head>
+    <title>Formular Flug anlegen - 15</title>
+    <link rel="stylesheet" type="text/css" href="../css/flugAnlegen.css">
+    <script type="text/javascript" src="../js/flugAnlegen.js">
+    </script>
+  </head>
+  <body onLoad="hinweis()">    
+
+    <form action="http://fhh.mine.nu:8182/servlet/08/DB_Eintrag" 
+          method="post"
+          onSubmit="return testeEingaben()" >
+      <table>
+        <tr>
+          <td colspan="2">      
+            <h2>Formular "Flug anlegen"</h2>
+          <td>
+        <tr>
+        <tr>
+          <td class="Label">Startort</td>
+          <td>    
+            <select name="startort">          
+              <option>Frankfurt</option>
+              <option selected="selected">Hannover</option> <!-- So XHTML-konform, aber einfache Angabe selected reicht aus -->
+            </select>
+          </td>
+         </tr>
+        <tr>
+          <td class="Label">Zielort</td>
+          <td>
+            <select name="zielort">
+              <option>Berlin</option>
+              <option>Frankfurt</option>
+              <option>Hannover</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="Label">Abflugdatum</td>
+          <td>
+            <select name="abflugdatum">
+              <option>01.02.2012</option>
+              <option>02.02.2012</option>
+              <option>03.02.2012</option>
+              <option>04.02.2012</option>
+              <option>05.02.2012</option>
+              <option>06.02.2012</option>
+              <option>07.02.2012</option>
+              <option>10.02.2012</option>
+              <option>11.02.2012</option>
+              <option>12.02.2012</option>
+              <option>13.02.2012</option>
+              <option>21.02.2012</option>
+              <option>22.02.2012</option>
+              <option>25.02.2012</option>
+              <option>26.02.2012</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="Label">Abflugzeit</td>
+          <td>
+            <select name="abflugzeit">
+              <option>07:00</option>
+              <option>08:00</option>
+              <option>09:00</option>
+              <option>10:00</option>
+              <option>16:00</option>
+              <option>17:00</option>
+              <option>18:00</option>
+              <option>19:00</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="Label">Flugzeutyp</td>
+          <td>
+           <select name="platzanzahl"> 
+              <option value="105">A318-100</option>
+              <option value="142">A319-100</option>
+              <option value="275">A330-200</option>
+              <option value="375">A300-600</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><input class="Button" type="submit" value="Senden" onClick="senden()"></td>
+          <td><input class="Button" id="id" type="reset" value="Reset"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
