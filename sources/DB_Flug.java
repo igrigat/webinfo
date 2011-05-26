@@ -6,8 +6,9 @@
                   Löschen eines Datensatzes.
                   Ermittlung 'Anzahl der Datensätze'.
                   Anzeige der Datensätze mit zwei Anzeigemethoden.
+                  Rahmen für die Rückgabe der Datensätze als 'Flug-Array'.
                   Anpassungen an eigene Nutzernummer 
-                  (bei package u00; und 5x flug00) !!
+                  (bei package u00; und 7x flug00) !!
   Version       : 09.02.2011
 */
 package u08;
@@ -199,6 +200,29 @@ implements DBI {
     }
 
   }                          
-                          
+
+// Alle Datensätze aus Tabelle holen
+  static public Flug [] holeAlleDatensätze()
+  {
+  Connection dbc = baueVerbindungAuf();
+  Flug [] fluege = null;
+
+    try {
+      Statement s = dbc.createStatement();
+      ResultSet rs = s.executeQuery("select * from flug08");
+      while (rs.next()) {
+   
+      }
+    }
+    catch (SQLException sqle) {
+      System.out.format("Fehler in holeAlleDatensätze(): %s\n", sqle);
+    } 
+    finally {
+      beendeVerbindung(dbc);
+    }
+
+    return fluege;
+  }
+                            
 }
                       

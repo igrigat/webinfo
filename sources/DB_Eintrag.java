@@ -4,7 +4,7 @@
   Fragestellung : Servlet-Klasse, Eintrag der Formulardaten in Datenbank.
   Version       : 10.02.2011
 */
-package u00;
+package u08;
  
 import java.io.*;
 import javax.servlet.*;

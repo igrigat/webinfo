@@ -4,7 +4,7 @@
   Fragestellung : Servlet-Klasse, Cookie über Header-Element setzen.
   Version       : 10.02.2011
 */
-package u08;
+package u00;
 
 import java.io.*;
 import javax.servlet.*;
