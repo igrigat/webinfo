@@ -1,0 +1,13 @@
+/*
+  Dateiname     : flugAnlegen.css
+  Veranstaltung : Webbasierte Informationssysteme
+  Fragestellung : Externe CSS-Datei zum Formular FlugAnlegen.html (ab Stufe 03)
+  Version       : 30.01.2011
+
+*/
+@charset "ISO-8859-1";
+
+h2      {color: blue}
+.Button {color: green}
+.Label  {color: red}
+#id     {color: yellow}
