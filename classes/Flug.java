@@ -2,7 +2,7 @@
   Dateiname     : Flug.java
   Veranstaltung : Webbasierte Informationssysteme
   Fragestellung : Bean-Klasse für die Arbeit mit einem Flug.
-  Version       : 09.02.2011
+  Version       : 10.02.2011
 */
 package va2;
 
